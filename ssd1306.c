@@ -1,17 +1,14 @@
 #include <i2c.h>
 #include <ssd1306.h>
-#include "msp.h"
-#include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
 #include "address.h"
 #include "font6x8.h"
-#include "font12x16.h"
 
-volatile uint32_t i;
-unsigned char data [2];
 unsigned char *TI_transmit_field;
 unsigned char *dataBuffer;
+unsigned char data [2];
+volatile uint32_t i;
+
+
 
 void ssdInit() {
     Command(SSD1306_DISPLAY_OFF);
